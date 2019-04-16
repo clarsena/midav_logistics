@@ -215,7 +215,8 @@ template {
   overflow: hidden; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 h1,
 h2,
@@ -235,20 +236,27 @@ a {
 
 body {
   font-size: 1.6rem;
-  background-color: #111111;
+  background-color: #0c0c0c;
   color: #eeeeee;
   font-family: 'Montserrat', sans-serif; }
 
 .wrapper {
   max-width: 1140px;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 0 1%; }
+  padding: 0 1%;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .header {
   background: url("../../assets/silver_transport_truck.jpg");
   background-size: cover;
   min-height: 100vh;
-  padding-top: 15px; }
+  padding-top: 15px;
+  width: 100%; }
 
 .overlay {
   position: absolute;
@@ -256,30 +264,32 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(2, 10, 19, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 2; }
 
 .topNav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin: 0 50px;
   position: relative;
-  z-index: 3; }
+  z-index: 3;
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey; }
 
 .logo-title {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   font-style: oblique; }
 
 .logo {
-  max-width: 75px;
+  max-width: 60px;
   margin-right: 20px; }
 
 .navBar {
   display: flex;
-  justify-content: space-between;
   text-transform: uppercase;
+  justify-content: space-between;
   width: 25%; }
   .navBar li a {
     color: #eeeeee; }
@@ -297,3 +307,34 @@ body {
   min-height: 85vh;
   justify-content: center;
   align-items: center; }
+
+.sectionHeader {
+  font-style: oblique;
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
+  z-index: 3;
+  position: relative; }
+
+section {
+  min-height: 100vh;
+  margin: 40px 0; }
+
+footer {
+  margin: 0 50px;
+  min-height: 30vh; }
+
+.aboutText {
+  margin: 10px 0; }
+
+.services {
+  background: url("../../assets/green_transport_truck.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 40px;
+  position: relative; }
+
+.servicesText {
+  margin: 10px 0;
+  position: relative;
+  z-index: 3; }
